@@ -131,15 +131,18 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES":(
         'rest_framework.permissions.AllowAny',
+    ), 'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
     )
+
 }
 
 
 # CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:80',"http://192.95.19.65:80","http://localhost:8080",
+    'http://localhost:80',"http://192.95.19.65","http://localhost:8080",
 ] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
 CORS_ORIGIN_REGEX_WHITELIST = [
-'http://localhost:80',"http://192.95.19.65:80","http://localhost:8080",
+'http://localhost:80',"http://192.95.19.65","http://localhost:8080",
 ]
